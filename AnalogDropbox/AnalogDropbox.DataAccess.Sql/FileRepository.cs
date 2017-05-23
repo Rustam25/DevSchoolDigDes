@@ -9,9 +9,9 @@ namespace AnalogDropbox.DataAccess.Sql
     public class FilesRepository : IFilesRepository
     {
         private readonly string _connectionString;
-        private readonly IUserRepository _usersRepository;
+        private readonly IUsersRepository _usersRepository;
 
-        public FilesRepository(string connectionString, IUserRepository usersRepository)
+        public FilesRepository(string connectionString, IUsersRepository usersRepository)
         {
             _connectionString = connectionString;
             _usersRepository = usersRepository;

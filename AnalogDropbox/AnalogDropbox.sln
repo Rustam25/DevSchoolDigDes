@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.3
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalogDropbox.Model", "AnalogDropbox.Model\AnalogDropbox.Model.csproj", "{6FBCD6B4-DE40-4EE0-8DE2-F734218C9E5F}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalogDropbox.DataAccess", "AnalogDropbox.DataAccess\AnalogDropbox.DataAccess.csproj", "{F3F0EB78-6ED1-46B5-961F-2D2F20F3EE51}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalogDropbox.DataAccess.Sql", "AnalogDropbox.DataAccess.Sql\AnalogDropbox.DataAccess.Sql.csproj", "{C15FDC5E-0886-4FE9-A9E9-DDAAC35A5C52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalogDropbox.DataAccess.Sql.Tests", "AnalogDropbox.DataAccess.Sql.Tests\AnalogDropbox.DataAccess.Sql.Tests.csproj", "{DEC87867-29FB-4241-AE09-36916755DFEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,8 +31,15 @@ Global
 		{C15FDC5E-0886-4FE9-A9E9-DDAAC35A5C52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C15FDC5E-0886-4FE9-A9E9-DDAAC35A5C52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C15FDC5E-0886-4FE9-A9E9-DDAAC35A5C52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEC87867-29FB-4241-AE09-36916755DFEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEC87867-29FB-4241-AE09-36916755DFEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEC87867-29FB-4241-AE09-36916755DFEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEC87867-29FB-4241-AE09-36916755DFEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DEC87867-29FB-4241-AE09-36916755DFEC} = {65F520BE-BCA5-44B2-AC67-547493C999F7}
 	EndGlobalSection
 EndGlobal

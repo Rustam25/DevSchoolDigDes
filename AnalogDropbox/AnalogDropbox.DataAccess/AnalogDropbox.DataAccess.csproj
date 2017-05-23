@@ -42,7 +42,7 @@
   <ItemGroup>
     <Compile Include="ICommentRepository.cs" />
     <Compile Include="IFilesRepository.cs" />
-    <Compile Include="IUserRepository.cs" />
+    <Compile Include="IUsersRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

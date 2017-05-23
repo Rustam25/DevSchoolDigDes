@@ -5,7 +5,7 @@ using AnalogDropbox.DataAccess;
 
 namespace AnalogDropbox.DataAccess.Sql
 {
-    public class UsersRepository : IUserRepository
+    public class UsersRepository : IUsersRepository
     {
         private readonly string _connectionString;
 

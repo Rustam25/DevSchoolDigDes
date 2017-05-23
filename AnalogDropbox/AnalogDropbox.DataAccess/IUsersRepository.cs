@@ -3,7 +3,7 @@ using AnalogDropbox.Model;
 
 namespace AnalogDropbox.DataAccess
 {
-    public interface IUserRepository
+    public interface IUsersRepository
     {
         /// <summary>
         /// Добавление нового пользоователя

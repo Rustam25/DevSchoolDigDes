@@ -48,6 +48,15 @@ namespace AnalogDropbox.DataAccess
         void Delete(Guid id);
 
         /// <summary>
+        /// Открытие файла другому пользователю
+        /// </summary>
+        /// <param name="fileId">Идентификатор файла</param>
+        /// <param name="userId">Идентификатор пользователя</param>
+        /// <param name="readOnlyAccess">Дать доступ только на чтение</param>
+        void Shared(Guid fileId, Guid userId, bool readOnlyAccess);
+
+
+        /// <summary>
         /// Получение комментариев к файлу
         /// </summary>
         /// <param name="fileId">Идентификатор файла</param>
@@ -61,12 +70,6 @@ namespace AnalogDropbox.DataAccess
         /// <returns><see cref="Comment"></returns>
         Comment AddCommentToFile(Comment comment);
 
-        /// <summary>
-        /// Открытие файла другому пользователю
-        /// </summary>
-        /// <param name="fileId">Идентификатор файла</param>
-        /// <param name="userId">Идентификатор пользователя</param>
-        /// <param name="readOnlyAccess">Дать доступ только на чтение</param>
-        void Shared(Guid fileId, Guid userId, bool readOnlyAccess);
+        
     }
 }
