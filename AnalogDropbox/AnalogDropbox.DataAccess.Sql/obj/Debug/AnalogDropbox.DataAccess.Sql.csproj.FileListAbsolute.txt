@@ -12,3 +12,12 @@ E:\Projects\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug
 E:\Projects\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\AnalogDropbox.Model.dll
 E:\Projects\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\AnalogDropbox.DataAccess.pdb
 E:\Projects\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\AnalogDropbox.Model.pdb
+C:\DigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\AnalogDropbox.DataAccess.Sql.dll
+C:\DigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\AnalogDropbox.DataAccess.Sql.pdb
+C:\DigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\AnalogDropbox.DataAccess.dll
+C:\DigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\AnalogDropbox.Model.dll
+C:\DigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\AnalogDropbox.DataAccess.pdb
+C:\DigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\AnalogDropbox.Model.pdb
+C:\DigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\obj\Debug\AnalogDropbox.DataAccess.Sql.csprojResolveAssemblyReference.cache
+C:\DigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\obj\Debug\AnalogDropbox.DataAccess.Sql.dll
+C:\DigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\obj\Debug\AnalogDropbox.DataAccess.Sql.pdb

@@ -149,19 +149,92 @@ namespace AnalogDropbox.DataAccess.Sql
             }
         }
 
+        public void Shared(Guid fileId, Guid userId, bool readOnlyAccess)
+        {
+            using (SqlConnection connect = new SqlConnection(_connectionString))
+            {
+                connect.Open();
+                using (SqlCommand command = new SqlCommand("up_Shared_file", connect))
+                {
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@fileId", fileId);
+                    command.Parameters.AddWithValue("@userId", userId);
+                    command.Parameters.AddWithValue("@readOnlyAccess", readOnlyAccess);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+        public Comment GetComment(Guid commentId)
+        {
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = "select CommentId, FileId, Author, Text, PostTime from uf_Select_comment (@id)";
+                    command.Parameters.AddWithValue("@id", commentId);
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            return new Comment
+                            {
+                                CommentId = reader.GetGuid(reader.GetOrdinal("CommentId")),
+                                FileId = reader.GetGuid(reader.GetOrdinal("FileId")),
+                                Author = _usersRepository.Get(reader.GetGuid(reader.GetOrdinal("Author"))),
+                                Text = reader.GetString(reader.GetOrdinal("Text")),
+                                PostTime = reader.GetDateTime(reader.GetOrdinal("PostTime"))
+                            };
+                        }
+                        throw new ArgumentException("comment not found");
+                    }
+                }
+            }
+        }
+
         public IEnumerable<Comment> GetFileComments(Guid fileId)
         {
-            throw new NotImplementedException();
+            var result = new List<Comment>();
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = "select Comments.Id as Id from Shared join Comments on Shared.Id = Comments.SharedId where Shared.FileId = @fileId";
+                    command.Parameters.AddWithValue("@fileId", fileId);
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            result.Add(GetComment(reader.GetGuid(reader.GetOrdinal("Id"))));
+                        }
+                        return result;
+                    }
+                }
+            }
         }
 
         public Comment AddCommentToFile(Comment comment)
         {
-            throw new NotImplementedException();
-        }
-
-        public void Shared(Guid fileId, Guid userId, bool readOnlyAccess)
-        {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                using (var command = new SqlCommand("up_Insert_comment", connection))
+                {
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
+                    var commentId = Guid.NewGuid();
+                    command.Parameters.AddWithValue("@id", commentId);
+                    command.Parameters.AddWithValue("@fileId", comment.FileId);
+                    command.Parameters.AddWithValue("@userId", comment.Author.Id);
+                    command.Parameters.AddWithValue("@text", comment.Text);
+                    command.Parameters.AddWithValue("@postTime", comment.PostTime);
+                    command.ExecuteNonQuery();
+                    comment.CommentId = commentId;
+                    return comment;
+                }
+            }
         }
 
     }
