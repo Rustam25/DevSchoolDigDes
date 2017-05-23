@@ -40,7 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AnalogDropbox.DataAccess\AnalogDropbox.DataAccess.csproj">
+      <Project>{f3f0eb78-6ed1-46b5-961f-2d2f20f3ee51}</Project>
+      <Name>AnalogDropbox.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AnalogDropbox.Model\AnalogDropbox.Model.csproj">
+      <Project>{6fbcd6b4-de40-4ee0-8de2-f734218c9e5f}</Project>
+      <Name>AnalogDropbox.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

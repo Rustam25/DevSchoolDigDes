@@ -3,3 +3,8 @@ E:\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.Model\bin\Debug\AnalogDropbox.Mod
 E:\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.Model\obj\Debug\AnalogDropbox.Model.dll
 E:\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.Model\obj\Debug\AnalogDropbox.Model.pdb
 E:\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.Model\obj\Debug\AnalogDropbox.Model.csprojResolveAssemblyReference.cache
+E:\Projects\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.Model\bin\Debug\AnalogDropbox.Model.dll
+E:\Projects\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.Model\bin\Debug\AnalogDropbox.Model.pdb
+E:\Projects\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.Model\obj\Debug\AnalogDropbox.Model.csprojResolveAssemblyReference.cache
+E:\Projects\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.Model\obj\Debug\AnalogDropbox.Model.dll
+E:\Projects\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.Model\obj\Debug\AnalogDropbox.Model.pdb

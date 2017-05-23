@@ -38,7 +38,7 @@ namespace AnalogDropbox.DataAccess
         /// Получение коллекции файлов пользователя
         /// </summary>
         /// <param name="userId">Идентификатор пользователя</param>
-        /// <returns>IEnumerable<<see cref="File">></returns>
+        /// <returns>Колекция файлов</returns>
         IEnumerable<File> GetUserFiles(Guid userId);
 
         /// <summary>
@@ -46,5 +46,27 @@ namespace AnalogDropbox.DataAccess
         /// </summary>
         /// <param name="id">Идентификатор файла</param>
         void Delete(Guid id);
+
+        /// <summary>
+        /// Получение комментариев к файлу
+        /// </summary>
+        /// <param name="fileId">Идентификатор файла</param>
+        /// <returns>Коллекция коментарикв</returns>
+        IEnumerable<Comment> GetFileComments(Guid fileId);
+
+        /// <summary>
+        /// Добавление комментария к файлу
+        /// </summary>
+        /// <param name="comment"><see cref="Comment"></param>
+        /// <returns><see cref="Comment"></returns>
+        Comment AddCommentToFile(Comment comment);
+
+        /// <summary>
+        /// Открытие файла другому пользователю
+        /// </summary>
+        /// <param name="fileId">Идентификатор файла</param>
+        /// <param name="userId">Идентификатор пользователя</param>
+        /// <param name="readOnlyAccess">Дать доступ только на чтение</param>
+        void Shared(Guid fileId, Guid userId, bool readOnlyAccess);
     }
 }
