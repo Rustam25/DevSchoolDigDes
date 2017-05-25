@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalogDropbox.DataAccess.Sq
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalogDropbox.DataAccess.Sql.Tests", "AnalogDropbox.DataAccess.Sql.Tests\AnalogDropbox.DataAccess.Sql.Tests.csproj", "{DEC87867-29FB-4241-AE09-36916755DFEC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalogDropbox.WebApi", "AnalogDropbox.WebApi\AnalogDropbox.WebApi.csproj", "{CCA09B7F-613A-47FA-AC2C-B8B732D543A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{DEC87867-29FB-4241-AE09-36916755DFEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEC87867-29FB-4241-AE09-36916755DFEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEC87867-29FB-4241-AE09-36916755DFEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCA09B7F-613A-47FA-AC2C-B8B732D543A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCA09B7F-613A-47FA-AC2C-B8B732D543A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCA09B7F-613A-47FA-AC2C-B8B732D543A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCA09B7F-613A-47FA-AC2C-B8B732D543A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
