@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
-using AnalogDropbox.DataAccess;
+using System.Collections.Generic;
 using AnalogDropbox.DataAccess.Sql;
+using AnalogDropbox.DataAccess;
 using AnalogDropbox.Model;
+using AnalogDropbox.Log;
 
 namespace AnalogDropbox.WebApi.Controllers
 {
@@ -44,7 +42,7 @@ namespace AnalogDropbox.WebApi.Controllers
         [Route("api/users/{id}")]
         public void DeleteUser(Guid id)
         {
-            //Log.Logger.ServiceLog.Info("Delete user with id: {0}", id);
+            Logger.ServiceLog.Info("Delete user with id: {0}", id);
             _usersRepository.Delete(id);
         }
 
@@ -59,6 +57,7 @@ namespace AnalogDropbox.WebApi.Controllers
         [Route("api/users/{id}")]
         public User UpdateUser(Guid id, [FromBody] User user)
         {
+            Logger.ServiceLog.Info("Update user with id: {0}. Update data: FirstName = {1}, SecondName = {2}", id, user.FirstName, user.SecondName);
             return _usersRepository.Update(id, user.FirstName, user.SecondName);
         }
 

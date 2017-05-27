@@ -21,3 +21,7 @@ C:\DigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\A
 C:\DigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\obj\Debug\AnalogDropbox.DataAccess.Sql.csprojResolveAssemblyReference.cache
 C:\DigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\obj\Debug\AnalogDropbox.DataAccess.Sql.dll
 C:\DigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\obj\Debug\AnalogDropbox.DataAccess.Sql.pdb
+E:\Projects\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\AnalogDropbox.Log.dll
+E:\Projects\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\NLog.dll
+E:\Projects\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\AnalogDropbox.Log.pdb
+E:\Projects\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\NLog.xml

@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using AnalogDropbox.DataAccess;
 using AnalogDropbox.DataAccess.Sql;
 using AnalogDropbox.Model;
+using AnalogDropbox.Log;
 using System.Threading.Tasks;
 
 namespace AnalogDropbox.WebApi.Controllers
@@ -37,6 +35,7 @@ namespace AnalogDropbox.WebApi.Controllers
         [Route("api/files/{id}/content")]
         public async Task UpdateFileContent(Guid id)
         {
+            Logger.ServiceLog.Info("Update file content with id: {0}", id);
             var bytes = await Request.Content.ReadAsByteArrayAsync();
             _filesRepository.UpdateContent(id, bytes);
         }
@@ -62,6 +61,7 @@ namespace AnalogDropbox.WebApi.Controllers
         [Route("api/files/{id}")]
         public void DeleteFile(Guid id)
         {
+            Logger.ServiceLog.Info("Delete file with id: {0}", id);
             _filesRepository.Delete(id);
         }
 

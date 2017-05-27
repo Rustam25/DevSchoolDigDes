@@ -2,6 +2,8 @@
 using System.Data.SqlClient;
 using AnalogDropbox.Model;
 using AnalogDropbox.DataAccess;
+using AnalogDropbox.Log;
+using System.Reflection;
 
 namespace AnalogDropbox.DataAccess.Sql
 {
@@ -16,26 +18,38 @@ namespace AnalogDropbox.DataAccess.Sql
 
         public User Add(string firstName, string secondName, string email)
         {
-            using (var connection = new SqlConnection(_connectionString))
+            using (LogWrapper logger = new LogWrapper())
             {
-                connection.Open();
-
-                using (var command = new SqlCommand("[up_Insert_user]", connection))
+                try
                 {
-                    var userId = Guid.NewGuid();
-                    command.CommandType = System.Data.CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@id", userId);
-                    command.Parameters.AddWithValue("@firstName", firstName);
-                    command.Parameters.AddWithValue("@secondName", secondName);
-                    command.Parameters.AddWithValue("email", email);
-                    command.ExecuteNonQuery();
-                    return new User
+                    using (var connection = new SqlConnection(_connectionString))
                     {
-                        Id = userId,
-                        Email = email,
-                        FirstName = firstName,
-                        SecondName = secondName
-                    };
+                        connection.Open();
+
+                        using (var command = new SqlCommand("[up_Insert_user]", connection))
+                        {
+                            var userId = Guid.NewGuid();
+                            command.CommandType = System.Data.CommandType.StoredProcedure;
+                            command.Parameters.AddWithValue("@id", userId);
+                            command.Parameters.AddWithValue("@firstName", firstName);
+                            command.Parameters.AddWithValue("@secondName", secondName);
+                            command.Parameters.AddWithValue("email", email);
+                            command.ExecuteNonQuery();
+                            return new User
+                            {
+                                Id = userId,
+                                Email = email,
+                                FirstName = firstName,
+                                SecondName = secondName
+                            };
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    var method = MethodBase.GetCurrentMethod();
+                    logger.Error($"Error in {method.ReflectedType.Name}.{method.Name}(firstName = {firstName}, secondName = {secondName}, email = {email})|Error message: {ex.Message}");
+                    return new User();
                 }
             }
         }

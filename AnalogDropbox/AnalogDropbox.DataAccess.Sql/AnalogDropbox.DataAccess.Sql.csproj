@@ -49,10 +49,17 @@
       <Project>{f3f0eb78-6ed1-46b5-961f-2d2f20f3ee51}</Project>
       <Name>AnalogDropbox.DataAccess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AnalogDropbox.Log\AnalogDropbox.Log.csproj">
+      <Project>{3b2c6af4-08be-4407-9076-e96fe82d4e19}</Project>
+      <Name>AnalogDropbox.Log</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AnalogDropbox.Model\AnalogDropbox.Model.csproj">
       <Project>{6fbcd6b4-de40-4ee0-8de2-f734218c9e5f}</Project>
       <Name>AnalogDropbox.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
