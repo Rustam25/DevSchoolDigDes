@@ -149,7 +149,7 @@ namespace AnalogDropbox.DataAccess.Sql
             }
         }
 
-        public void Shared(Guid fileId, Guid userId, bool readOnlyAccess)
+        public void Shared(Guid ownerId, Guid fileId, Guid userId, bool readOnlyAccess)
         {
             using (SqlConnection connect = new SqlConnection(_connectionString))
             {
@@ -157,6 +157,7 @@ namespace AnalogDropbox.DataAccess.Sql
                 using (SqlCommand command = new SqlCommand("up_Shared_file", connect))
                 {
                     command.CommandType = System.Data.CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@ownerId", ownerId);
                     command.Parameters.AddWithValue("@fileId", fileId);
                     command.Parameters.AddWithValue("@userId", userId);
                     command.Parameters.AddWithValue("@readOnlyAccess", readOnlyAccess);

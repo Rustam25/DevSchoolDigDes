@@ -50,10 +50,11 @@ namespace AnalogDropbox.DataAccess
         /// <summary>
         /// Открытие файла другому пользователю
         /// </summary>
+        /// <param name="ownerId">Идентификатор владельца файла</param>>
         /// <param name="fileId">Идентификатор файла</param>
-        /// <param name="userId">Идентификатор пользователя</param>
+        /// <param name="userId">Идентификатор пользователя для расшаривания</param>
         /// <param name="readOnlyAccess">Дать доступ только на чтение</param>
-        void Shared(Guid fileId, Guid userId, bool readOnlyAccess);
+        void Shared(Guid ownerId, Guid fileId, Guid userId, bool readOnlyAccess);
 
 
         /// <summary>
@@ -70,6 +71,6 @@ namespace AnalogDropbox.DataAccess
         /// <returns><see cref="Comment"></returns>
         Comment AddCommentToFile(Comment comment);
 
-        
+
     }
 }
