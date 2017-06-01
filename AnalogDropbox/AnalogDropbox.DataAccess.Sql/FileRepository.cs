@@ -213,7 +213,7 @@ namespace AnalogDropbox.DataAccess.Sql
             }
         }
 
-        public void Shared(Guid ownerId, Guid fileId, Guid userId, bool readOnlyAccess)
+        public void Shared(Share share)
         {
             using (LogWrapper logger = new LogWrapper())
             {
@@ -225,10 +225,10 @@ namespace AnalogDropbox.DataAccess.Sql
                         using (SqlCommand command = new SqlCommand("up_Shared_file", connect))
                         {
                             command.CommandType = System.Data.CommandType.StoredProcedure;
-                            command.Parameters.AddWithValue("@ownerId", ownerId);
-                            command.Parameters.AddWithValue("@fileId", fileId);
-                            command.Parameters.AddWithValue("@userId", userId);
-                            command.Parameters.AddWithValue("@readOnlyAccess", readOnlyAccess);
+                            command.Parameters.AddWithValue("@ownerId", share.OwnerId);
+                            command.Parameters.AddWithValue("@fileId", share.FileId);
+                            command.Parameters.AddWithValue("@userId", share.PartOwnerId);
+                            command.Parameters.AddWithValue("@readOnlyAccess", share.ReadOnlyAccess);
                             command.ExecuteNonQuery();
                         }
                     }

@@ -25,3 +25,16 @@ E:\Projects\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug
 E:\Projects\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\NLog.dll
 E:\Projects\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\AnalogDropbox.Log.pdb
 E:\Projects\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\NLog.xml
+C:\DigDes\DevSchoolDigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\AnalogDropbox.DataAccess.Sql.dll
+C:\DigDes\DevSchoolDigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\AnalogDropbox.DataAccess.Sql.pdb
+C:\DigDes\DevSchoolDigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\AnalogDropbox.DataAccess.dll
+C:\DigDes\DevSchoolDigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\AnalogDropbox.Log.dll
+C:\DigDes\DevSchoolDigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\AnalogDropbox.Model.dll
+C:\DigDes\DevSchoolDigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\NLog.dll
+C:\DigDes\DevSchoolDigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\AnalogDropbox.DataAccess.pdb
+C:\DigDes\DevSchoolDigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\AnalogDropbox.Log.pdb
+C:\DigDes\DevSchoolDigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\AnalogDropbox.Model.pdb
+C:\DigDes\DevSchoolDigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\bin\Debug\NLog.xml
+C:\DigDes\DevSchoolDigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\obj\Debug\AnalogDropbox.DataAccess.Sql.csprojResolveAssemblyReference.cache
+C:\DigDes\DevSchoolDigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\obj\Debug\AnalogDropbox.DataAccess.Sql.dll
+C:\DigDes\DevSchoolDigDes\DevSchoolDigDes\AnalogDropbox\AnalogDropbox.DataAccess.Sql\obj\Debug\AnalogDropbox.DataAccess.Sql.pdb

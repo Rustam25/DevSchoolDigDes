@@ -54,7 +54,7 @@ namespace AnalogDropbox.DataAccess
         /// <param name="fileId">Идентификатор файла</param>
         /// <param name="userId">Идентификатор пользователя для расшаривания</param>
         /// <param name="readOnlyAccess">Дать доступ только на чтение</param>
-        void Shared(Guid ownerId, Guid fileId, Guid userId, bool readOnlyAccess);
+        void Shared(Share share);
 
 
         /// <summary>

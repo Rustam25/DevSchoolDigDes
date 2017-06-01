@@ -65,10 +65,10 @@ namespace AnalogDropbox.WebApi.Controllers
         /// Уточнить
         /// </summary>
         [HttpPost]
-        [Route("api/users/{id}/share/{fileId}/{access}")]
-        public void SharedFile(Guid id, Guid fileId, bool access, [FromBody] User user)
+        [Route("api/users/share")]
+        public void SharedFile(Share share)
         {
-            _filesRepository.Shared(id, fileId, user.Id, access);
+            _filesRepository.Shared(share);
         }
     }
 }

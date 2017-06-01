@@ -115,7 +115,14 @@ namespace Dropbox.DataAccess.Sql.Tests
                 LastWriteTime = DateTime.Now
             };
             var newFile = _filesRepository.Add(file);
-            _filesRepository.Shared(file.Owner.Id, newFile.Id, TestUser.Id, false);
+            Share share = new Share
+            {
+                FileId = Guid.NewGuid(),
+                OwnerId = Guid.NewGuid(),
+                PartOwnerId = Guid.NewGuid(),
+                ReadOnlyAccess = true
+            };
+            _filesRepository.Shared(share);
             //act
             var userFiles = _filesRepository.GetUserFiles(TestUser.Id);
             //asserts
